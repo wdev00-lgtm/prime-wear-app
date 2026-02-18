@@ -1,11 +1,14 @@
-const cartModal = document.getElementById("cartModal");
-const cartIcon = document.querySelector(".nav-icons span:last-child");
+let cartCount = 0;
 
-cartIcon.addEventListener("click", () => {
-    cartModal.style.display = "block";
-});
-
-function closeCart() {
-    cartModal.style.display = "none";
+function addToCart() {
+    cartCount++;
+    document.getElementById("cart-count").innerText = cartCount;
 }
 
+function openCart() {
+    document.getElementById("cartModal").style.display = "block";
+}
+
+function closeCart() {
+    document.getElementById("cartModal").style.display = "none";
+}
