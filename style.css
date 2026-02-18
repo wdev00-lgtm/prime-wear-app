@@ -1,51 +1,66 @@
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     background: #ffffff;
-    color: #000000;
+    color: #000;
 }
 
 header {
+    position: sticky;
+    top: 0;
+    background: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 20px;
-    background: #ffffff;
     border-bottom: 1px solid #eee;
+    z-index: 1000;
 }
 
 header h1 {
-    font-size: 20px;
+    font-size: 18px;
     letter-spacing: 2px;
 }
 
-.nav-icons span {
+.nav-icons {
+    display: flex;
+    align-items: center;
+}
+
+.cart-icon {
+    position: relative;
     margin-left: 15px;
     cursor: pointer;
+}
+
+#cart-count {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background: #ff3b3b;
+    color: white;
+    font-size: 10px;
+    padding: 3px 6px;
+    border-radius: 50%;
 }
 
 .banner {
     text-align: center;
     padding: 60px 20px;
-    background: #f8f8f8;
-}
-
-.banner h2 {
-    font-size: 28px;
-}
-
-.banner p {
-    margin: 10px 0;
-    color: #555;
+    background: #f9f9f9;
 }
 
 .banner button {
     padding: 10px 20px;
-    background: #ff3b3b;
-    border: none;
+    background: #000;
     color: white;
-    cursor: pointer;
+    border: none;
     border-radius: 5px;
+    cursor: pointer;
+}
+
+.banner button:hover {
+    background: #ff3b3b;
 }
 
 .categories {
@@ -55,14 +70,21 @@ header h1 {
 }
 
 .category {
-    padding: 15px 25px;
+    padding: 12px 20px;
     background: #f4f4f4;
     border-radius: 20px;
     cursor: pointer;
+    transition: 0.3s;
+}
+
+.category:hover {
+    background: #000;
+    color: white;
 }
 
 .products {
     padding: 20px;
+    margin-bottom: 80px;
 }
 
 .product-grid {
@@ -72,11 +94,15 @@ header h1 {
 }
 
 .product-card {
-    background: #ffffff;
     border: 1px solid #eee;
     padding: 10px;
     border-radius: 10px;
     text-align: center;
+    transition: 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
 }
 
 .product-card img {
@@ -90,7 +116,7 @@ header h1 {
     margin-top: 10px;
     padding: 8px;
     width: 100%;
-    background: #000000;
+    background: #000;
     color: white;
     border: none;
     border-radius: 5px;
@@ -99,6 +125,21 @@ header h1 {
 
 .product-card button:hover {
     background: #ff3b3b;
+}
+
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 0;
+    border-top: 1px solid #eee;
+}
+
+.bottom-nav span {
+    cursor: pointer;
 }
 
 .modal {
@@ -117,4 +158,3 @@ header h1 {
     text-align: center;
     border-radius: 10px;
 }
-
