@@ -1,83 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
     <title>PRIME WEAR</title>
-    <link rel="stylesheet" href="style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
 <header>
     <h1>PRIME WEAR</h1>
-    <div class="nav-icons">
-        <span>♡</span>
-        <div class="cart-icon">
-            🛒
-            <span id="cart-count">0</span>
-        </div>
-    </div>
+    <nav>
+        <a href="products.html">Shop</a>
+        <a href="cart.html">Cart</a>
+    </nav>
 </header>
 
 <section class="banner">
     <h2>New Season Collection</h2>
     <p>Minimal. Modern. Premium.</p>
-    <button>Shop Now</button>
+    <a href="products.html" class="btn">Shop Now</a>
 </section>
 
-<section class="categories">
-    <div class="category">Men</div>
-    <div class="category">Women</div>
-    <div class="category">Kids</div>
-</section>
+<footer>
+    Developed by ANANTH
+</footer>
 
-<section class="products">
-    <h2>Trending Now</h2>
-    <div class="product-grid">
-
-        <div class="product-card">
-            <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab">
-            <h3>Classic White Tee</h3>
-            <p>₹999</p>
-            <button onclick="addToCart()">Add to Cart</button>
-        </div>
-
-        <div class="product-card">
-            <img src="https://images.unsplash.com/photo-1516826957135-700dedea698c">
-            <h3>Minimal Black Shirt</h3>
-            <p>₹1,499</p>
-            <button onclick="addToCart()">Add to Cart</button>
-        </div>
-
-        <div class="product-card">
-            <img src="https://images.unsplash.com/photo-1520975916090-3105956dac38">
-            <h3>Pastel Hoodie</h3>
-            <p>₹1,899</p>
-            <button onclick="addToCart()">Add to Cart</button>
-        </div>
-
-    </div>
-</section>
-
-<!-- Bottom Navigation -->
-<nav class="bottom-nav">
-    <span>🏠 Home</span>
-    <span>🔍 Search</span>
-    <span onclick="openCart()">🛒 Cart</span>
-    <span>👤 Profile</span>
-</nav>
-
-<!-- Cart Modal -->
-<div id="cartModal" class="modal">
-    <div class="modal-content">
-        <h2>Your Cart</h2>
-        <p>This is a demo store.</p>
-        <p>Payment option is not available.</p>
-        <button onclick="closeCart()">Close</button>
-    </div>
-</div>
-
-<script src="script.js"></script>
 </body>
 </html>
