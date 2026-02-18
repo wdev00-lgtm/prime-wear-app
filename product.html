@@ -1,1 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product - PRIME WEAR</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <h1>PRIME WEAR</h1>
+    <nav>
+        <a href="products.html">Back</a>
+        <a href="cart.html">Cart</a>
+    </nav>
+</header>
+
+<div class="container">
+    <img id="product-img" style="width:100%;max-width:400px;">
+    <h2 id="product-name"></h2>
+    <p class="price" id="product-price"></p>
+
+    <h4>Select Size</h4>
+    <div class="sizes">
+        <span>S</span>
+        <span>M</span>
+        <span>L</span>
+        <span>XL</span>
+    </div>
+
+    <h4>Offers</h4>
+    <p>10% Off on First Order</p>
+    <p>Free Delivery Above ₹999</p>
+
+    <br>
+    <button class="btn" onclick="addCurrentProduct()">Add to Cart</button>
+</div>
+
+<script src="js/app.js"></script>
+<script>
+    const params = new URLSearchParams(window.location.search);
+    const name = params.get("name");
+    const price = params.get("price");
+    const img = params.get("img");
+
+    document.getElementById("product-name").innerText = name;
+    document.getElementById("product-price").innerText = price;
+    document.getElementById("product-img").src = img;
+
+    function addCurrentProduct() {
+        addToCart(name, price);
+    }
+</script>
+
+</body>
+</html>
 
