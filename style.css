@@ -1,1 +1,120 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #ffffff;
+    color: #000000;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: #ffffff;
+    border-bottom: 1px solid #eee;
+}
+
+header h1 {
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+.nav-icons span {
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.banner {
+    text-align: center;
+    padding: 60px 20px;
+    background: #f8f8f8;
+}
+
+.banner h2 {
+    font-size: 28px;
+}
+
+.banner p {
+    margin: 10px 0;
+    color: #555;
+}
+
+.banner button {
+    padding: 10px 20px;
+    background: #ff3b3b;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.categories {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.category {
+    padding: 15px 25px;
+    background: #f4f4f4;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.products {
+    padding: 20px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+}
+
+.product-card {
+    background: #ffffff;
+    border: 1px solid #eee;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.product-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.product-card button {
+    margin-top: 10px;
+    padding: 8px;
+    width: 100%;
+    background: #000000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.product-card button:hover {
+    background: #ff3b3b;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    width: 80%;
+    max-width: 300px;
+    margin: 150px auto;
+    text-align: center;
+    border-radius: 10px;
+}
 
